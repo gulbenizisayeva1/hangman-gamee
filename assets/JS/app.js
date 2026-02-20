@@ -14,7 +14,7 @@ const resetGame = ()=>{
     correctLetters = [];
     wrongGuessCount = 0;
     wordDisplay.innerHTML = currentWord.split("").map(()=>` <li class="letter"></li>`).join("")
-    hangmanImage.src = `./assets/images/hangman-${wrongGuessCount}.svg`
+    hangmanImage.src = `/hangman-gamee/assets/images/hangman-${wrongGuessCount}.svg`
     guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`
     keyboardDiv.querySelectorAll("button").forEach(btn=>btn.disabled = false)
     gameModal.classList.remove("show")
