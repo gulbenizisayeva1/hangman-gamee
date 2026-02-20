@@ -14,7 +14,7 @@ const resetGame = ()=>{
     correctLetters = [];
     wrongGuessCount = 0;
     wordDisplay.innerHTML = currentWord.split("").map(()=>` <li class="letter"></li>`).join("")
-    hangmanImage.src = `/hangman-gamee/assets/images/hangman-${wrongGuessCount}.svg`
+    hangmanImage.src = `./assets/images/hangman-${wrongGuessCount}.svg`
     guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`
     keyboardDiv.querySelectorAll("button").forEach(btn=>btn.disabled = false)
     gameModal.classList.remove("show")
@@ -32,7 +32,7 @@ const resetGame = ()=>{
  const gameOver = (isVictory) =>{
     setTimeout(()=>{
 const modalText = isVictory ? `You found the word:` : `The corret word was:`
-gameModal.querySelector("img").src = `/hangman-gamee/assets/images/${isVictory ? "Victory" : "Lost"}.gif`
+gameModal.querySelector("img").src = `./assets/images/${isVictory ? "Victory" : "Lost"}.gif`
 gameModal.querySelector("h4").innerText = `${isVictory ? "Congrats" : "Game Over"}`
 gameModal.querySelector("p").innerHTML = `${modalText} <b>${currentWord}</b>`
 gameModal.classList.add("show")
@@ -50,7 +50,7 @@ gameModal.classList.add("show")
          })
         }else{
              wrongGuessCount++;
-             hangmanImage.src = `/hangman-gamee/assets/images/hangman-${wrongGuessCount}.svg`
+             hangmanImage.src = `./assets/images/hangman-${wrongGuessCount}.svg`
         }
         button.disabled = true
         guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`
