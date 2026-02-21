@@ -15,7 +15,7 @@ The user tries to guess a hidden word by selecting letters. Each incorrect guess
 
 ## 🛠 Technologies Used
 - HTML5
-- CSS3
+- CSS4
 - JavaScript (Vanilla JS)
 
 
